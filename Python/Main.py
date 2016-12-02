@@ -11,5 +11,8 @@ dirlist = os.listdir("../Pics/")             #Then save the paths of the pics in
 
 while True:
     random.seed()
-    twitterObj.writeTweetWithMedia(dirlist[random.randrange(0, len(dirlist))], "")
+
+    pic = "../Pics/" + dirlist[random.randrange(0, len(dirlist))]
+
+    twitterObj.writeTweetWithMedia(pic, pic)
     time.sleep(43200)

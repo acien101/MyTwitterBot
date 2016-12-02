@@ -52,3 +52,12 @@ class TwitterClass:
 
         return cursor
 
+
+    '''Function for writing tweets'''
+    def writeTweet(self, text):
+        self.api.update_status(status= text)
+
+    '''To upload a file, you only have to put the path of the picture'''
+    def writeTweetWithMedia(self, pic, text):
+        self.api.update_with_media(status=text, filename=pic)
+
